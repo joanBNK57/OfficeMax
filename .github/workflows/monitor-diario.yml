@@ -2,8 +2,9 @@ name: Monitor diario de precios
 
 on:
   schedule:
-    # Corre todos los días a las 08:00 hora CDMX (14:00 UTC)
-    - cron: "0 14 * * *"
+    # Todos los días a las 05:00, hora de Ciudad de México
+    - cron: "0 5 * * *"
+      timezone: "America/Mexico_City"
   workflow_dispatch: {}  # te permite correrlo manualmente desde GitHub también
 
 jobs:
